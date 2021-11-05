@@ -9,6 +9,13 @@ class Students:
         self.subject = new_Subject
 
 
+def Print_menu():
+    print("1.Вывод предметов")
+    print("2.Вывод оценок")
+    print("3.Изменение предметов")
+    print("4.Изменение оценок")
+    print("Выберите операцию:")
+
 def change_mark():
     new_mark = []
     print("введите количество оценок")
@@ -33,6 +40,7 @@ def change_subject():
 
 Egor = Students()
 while 1:
+    Print_menu()
     choice = int(input())
     if choice == 1:
         print(Egor.subject)
