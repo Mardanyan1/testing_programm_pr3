@@ -5,6 +5,9 @@ class Students:
     def ch_mark(self, Mark):
         self.mark = Mark
 
+    def ch_subject(self, new_Subject):
+        self.subject = new_Subject
+
 
 def change_mark():
     new_mark = []
@@ -17,6 +20,17 @@ def change_mark():
     Egor.ch_mark(new_mark)
 
 
+def change_subject():
+    new_subject = []
+    print("введите количество предметов")
+    n_subjects = int(input())
+    print("введите предметы")
+    while n_subjects > 0:
+        n_subjects = n_subjects - 1
+        new_subject.append(input())
+    Egor.ch_subject(new_subject)
+
+
 Egor = Students()
 while 1:
     choice = int(input())
@@ -25,4 +39,7 @@ while 1:
     elif choice == 2:
         print(Egor.mark)
     elif choice == 3:
+        change_subject()
+    elif choice == 4:
         change_mark()
+    print("\n")
